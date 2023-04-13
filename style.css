@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: cursive;
+}
+
+body {
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #8739f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: timer 1s linear infinite;
+}
