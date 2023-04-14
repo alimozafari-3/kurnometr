@@ -25,3 +25,17 @@ body {
     align-items: center;
     animation: timer 1s linear infinite;
 }
+
+@keyframes timer {
+    100% {
+        box-shadow: 0px 0px 0px 20px #8739f9;
+    }
+}
+
+.titel {
+    font-size: 45px;
+}
+
+.container .div {
+    font-size: 58px;
+}
