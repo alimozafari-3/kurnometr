@@ -9,19 +9,31 @@ let ss = 0;
 let interval;
 
 function start() {
-    interval = setInterval(() => {
-      if (ss < 59) {
-        ss += 1;
-        less10(ss, s);
+  interval = setInterval(() => {
+    if (ss < 59) {
+      ss += 1;
+      less10(ss, s);
+    } else {
+      ss = 0;
+      if (mm < 59) {
+        mm += 1;
+        less10(mm, m);
       } else {
-        ss = 0;
-        if (mm < 59) {
-          mm += 1;
-          less10(mm, m);
-        } else {
-          hh += 1;
-          less10(hh, h);
-        }
+        hh += 1;
+        less10(hh, h);
       }
-    }, 1000);
+    }
+  }, 1000);
+}
+
+function stop() {
+  clearInterval(interval);
+}
+
+function less10(val, elm) {
+  if (val < 10) {
+    elm.innerHTML = "0" + val;
+  } else {
+    elm.innerHTML = val;
   }
+}
